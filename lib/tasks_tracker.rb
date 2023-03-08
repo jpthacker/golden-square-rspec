@@ -10,4 +10,8 @@ class TasksTracker
     def tasks
         @tasks
     end
+
+    def remove_task(task)
+        @tasks.delete(task)
+    end
 end

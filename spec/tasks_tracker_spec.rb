@@ -13,4 +13,11 @@ RSpec.describe TasksTracker do
             expect(tasks_tracker.tasks).to eq ["First task", "Second task"]
         end
     end
+
+    describe "delete_task" do
+        it "removes a task from the list of tasks" do
+            tasks_tracker.remove_task("Second task")
+            expect(tasks_tracker.tasks).to eq ["First task"]
+        end
+    end
 end
